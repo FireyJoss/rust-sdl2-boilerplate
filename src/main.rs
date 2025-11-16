@@ -1,6 +1,5 @@
 mod winsdl;
 
-use std::time::Instant;
 use sdl2::{event::Event, pixels::PixelFormatEnum};
 use winsdl::Winsdl;
 
@@ -36,21 +35,23 @@ fn main() {
         }
 
         // --- DRAWING START ---
+        // Simple example of how to use the put_pixel function.
         for y in 0..winsdl.height {
             for x in 0..winsdl.width {
                 let mut r = 0;
                 let mut g = 0;
                 let mut b = 0;
 
+                //setting all pixels on the left half of the window to blue
                 if (x < winsdl.width / 2){
                     b = 255;
                 }
 
                 put_pixel(&mut framebuffer, winsdl.width, x, y, r, g, b);
             }
-        }
-        
+        } 
         // --- DRAWING END ---
+
         texture.update(None, &framebuffer, winsdl.width * 3).unwrap();
 
         winsdl.canvas.clear();
