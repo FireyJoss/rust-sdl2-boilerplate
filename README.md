@@ -29,6 +29,12 @@ Running the Project
   cargo run
 
 How to Draw Pixels
-
 This helper function writes an RGB pixel into the framebuffer:
 put_pixel(&mut framebuffer, width, x, y, r, g, b);
+
+Project Structure
+src/
+├── main.rs      # Main loop, framebuffer, texture update
+└── winsdl.rs    # SDL2 window wrapper (Winsdl struct)
+
+
