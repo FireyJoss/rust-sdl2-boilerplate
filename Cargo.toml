@@ -1,0 +1,8 @@
+[package]
+name = "renderer3d"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gl = "*"
+sdl2 = { version = "*", features = ["bundled"]}
