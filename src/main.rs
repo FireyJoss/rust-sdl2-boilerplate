@@ -43,7 +43,7 @@ fn main() {
                 let mut b = 0;
 
                 //setting all pixels on the left half of the window to blue
-                if (x < winsdl.width / 2){
+                if x < winsdl.width / 2 {
                     b = 255;
                 }
 
